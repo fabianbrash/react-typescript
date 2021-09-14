@@ -7,9 +7,12 @@ type GreetProps = {
 }
 // function Greet(props: GreetProps) without destructuring
 function Greet({ name, messageCount, isLoggedIn}: GreetProps) {
-    // const { messageCount = 0 } = messageCount
-    messageCount ? messageCount = messageCount: messageCount = 0; //if nothing is passed in set it to zero, if something is passed in set it to props
-    // note above we are also destructing messageCount hence we are using messageCount on line 15 instead of props.messageCount
+    // const { messageCount = 0 } = messageCount //if nothing is passed in set it to zero, if something is passed in set it to props
+    // note above we are also destructuring messageCount hence we are using messageCount on line 15 instead of props.messageCount
+    //messageCount ? messageCount = messageCount: messageCount = 0; 
+    if(!messageCount) {
+        messageCount = 0;
+    }
     return (
         <div>
             {isLoggedIn ? (

@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <Greet name='Alexander Brash' messageCount={21} isLoggedIn={true} />
+       <Greet name='Alexander Brash' messageCount={22} isLoggedIn={true} />
 
        <Person name={personName} />
 
