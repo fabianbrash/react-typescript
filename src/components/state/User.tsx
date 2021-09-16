@@ -8,6 +8,11 @@ const User = () => {
 
     const [user, setUser] = useState<AuthUser | null>(null);
 
+    // type assertion
+
+    // const [user, setUser] = useState<AuthUser>({} as AuthUser);
+    // the above will allow us to do this {user.name} {user.email}
+
     const handleLogin = () => {
         setUser({
             name: 'Alexander',
